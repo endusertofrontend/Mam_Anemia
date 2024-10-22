@@ -1,0 +1,262 @@
+/*global CSS */
+
+body {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 0.8rem; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+header img {
+    height: 8.25rem; 
+} 
+
+hr {
+    border: none; /* Removes the default border */
+    height: 3px; /* Sets the thickness of the line */
+    background-color: #ccc; /* Sets the color of the line */
+}
+
+.container audio {
+        background-color: #f0f0f0; /* Optional: Light background to match your design */
+        border: 2px solid #ddd; /* Optional: Border for a cleaner look */
+        border-radius: 5px; /* Slightly rounded corners */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a modern touch */
+    }
+
+.tabs {
+    background-color: #04AA6D;
+    border: none;
+    color: black;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+
+
+
+h4 {
+    text-align: center;
+    color: #800020;
+}
+
+
+
+@media only screen and (min-width: 1850px) {
+
+    .container audio {
+        width: 100%; /* Makes the audio player responsive */
+        max-width: 55%; /* Sets a maximum width to prevent it from getting too large */
+    }
+    
+}
+
+
+/* PC CSS*/
+@media only screen and (min-width: 601px) {
+
+
+    header {
+        grid-row: 1 / 2;
+        display: grid; 
+        grid-template-columns: 1fr 4fr 2fr 1fr;  
+    }
+    
+    header .logo {
+        grid-row: 1/1; 
+        grid-column: 1/1; 
+    }
+    
+    
+    header nav {
+        grid-row: 1/1; 
+        grid-column: 3/4; 
+        text-align: center; 
+        display: flex; 
+        justify-content: left; 
+        align-items: center;  
+        gap: 2rem; 
+    }
+    
+    section {
+        grid-row: 2/3; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 65vh; 
+    }
+    
+    main {
+        grid-row: 3/4; 
+        display: grid; 
+        grid-template-columns: 1fr 2fr 2fr 1fr;   
+    }
+    
+    main .anemia {
+        grid-row: 1/1;
+        grid-column: 2/3;
+    }
+    
+    footer {
+        grid-row: 4/5;
+        text-align: center; 
+    }
+    
+    section img {
+        width: 100%; 
+        height: 100%; 
+        display: block; 
+    }
+    
+    .container {
+        text-align: center; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;  
+        flex-direction: column; 
+        gap: 2rem; 
+    }
+    
+    .anemia { border-style: outset; }
+    .anemia {
+            text-align: center;
+            background-color: white;
+            color: black;
+            font-family: Tahoma, sans-serif;
+            border-radius: 5px;
+        }
+       
+    .textcontainer {
+            overflow: auto;
+            width: 90%;
+            height: 500px; 
+            padding: 10px;
+            text-align: left;    
+            padding: 4%;
+          
+            
+    }
+
+    
+    audio:hover, audio:focus {
+        border-color: #aaa; /* Changes border color when hovered or focused */
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow effect */
+    }  
+
+
+}
+
+/* mobile CSS */
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 1rem; /* Slightly larger than the default for better readability on mobile */
+        line-height: 1.6; /* Improves spacing between lines for readability */
+    }
+
+    header {
+        grid-row: 1/2; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 0.5fr;
+    }
+
+    header .logo {
+        grid-row: 1/2;
+        grid-column: 1/2; 
+    }
+
+    header nav {
+        grid-row: 1/2; 
+        grid-column: 3/4;
+        text-align: center; 
+        display: flex; 
+        justify-content: left; 
+        align-items: center;  
+        gap: 0.5rem; 
+    }
+
+
+    section {
+        grid-row: 2/3; 
+    }
+
+    section img {
+        width: 100%;
+        max-height: 50vh; /* Adjust this to fit your needs */
+        object-fit: cover; /* Ensures the image scales correctly */
+        display: block;
+    }
+
+    main {
+        grid-row: 3/4;
+    }
+
+    footer {
+        grid-row: 4/5;
+        text-align: center;
+    }
+
+    header img {
+        height: 5.25rem; 
+    }
+    .tabs {
+        padding: 0.5rem 1rem; 
+    }
+
+    .container {
+        text-align: center; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem; 
+
+    }
+
+
+    .anemia {
+            text-align: center;
+            background-color: white;
+            color: black;
+            font-family: Tahoma, sans-serif;
+        }
+       
+    .textcontainer {
+            overflow: auto;
+            width: 80%;
+            height: 300px; 
+            padding: 10px;
+            text-align: left;    
+            padding: 4%;
+            border-style: outset;
+    }
+
+    .container audio {
+        width: 100%; /* Makes the audio player responsive */
+        max-width: 80%; /* Sets a maximum width to prevent it from getting too large */
+        background-color: #f0f0f0; /* Optional: Light background to match your design */
+        border: 2px solid #ddd; /* Optional: Border for a cleaner look */
+        border-radius: 5px; /* Slightly rounded corners */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a modern touch */
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+
+
+}
+
+
+
